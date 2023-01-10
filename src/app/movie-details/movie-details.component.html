@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card border-primary mb-3">
+        <div class="card-header bg-primary text-white">
+          <h2 class="title">{{film.title}}</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="https://image.tmdb.org/t/p/w300{{film.backdrop_path}}" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-8">
+              <h3>Description:</h3>
+              <p>{{film.overview}}</p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <!-- actors go here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+<div
+  class="card"
+  style="
+    width: 18rem;
+    margin: 10px 5px;
+    border-radius: 10px;
+  "
+>
+  <img
+    src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}"
+    alt=""
+    style="
+      height: 250px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    "
+  />
+  <div
+    class="card-body"
+    style="display: flex; flex-direction: row; justify-content: space-between"
+  >
+    <!--<div
+      [routerLink]="['/movie-detail', movie.id]"
+      [state]="movie"
+      style="cursor: hand"
+    >-->
+      <h5 class="card-title" style="text-align: center; cursor: pointer" (click)="handleDetailClick(movie.id)">
+        {{ movie.title }}
+      </h5>
+   <!-- </div>-->
+
+    <li class="list-group-item" style="text-align: end; width: 75px">
+      original language : {{ movie.original_language }}
+    </li>
+  </div>
+  <div
+    style="
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    "
+  >
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5%;
+      "
+    >
+      <span
+        *ngFor="let star of [1, 2, 3, 4, 5]"
+        [ngClass]="{ selected: star <= movie.vote_average }"
+        [ngClass]="{ unselected: star > movie.vote_average }"
+        title="Donner {{ star }} étoiles"
+        style="font-size: x-large"
+      >★</span
+      >
+    </div>
+
+   <!-- <div style="margin-right: 10px">
+      <button class="btn" (click)="showForm()" *ngIf="!isCart">
+        Add to cart
+      </button>
+      <button
+        class="btn"
+        (click)="removemovieFromCart(this.movie)"
+        *ngIf="isCart"
+      >
+        Remove from cart
+      </button>
+    </div>
+  </div>-->
+ <!-- <form *ngIf="showFormFlag" style="margin: auto" class="form-group">
+    <label for="quantity" class="form-control-label">Quantity:</label><br />
+    <input
+      type="number"
+      id="quantity"
+      name="quantity"
+      class="form-control"
+      #quantityInput
+    /><br />
+    <button
+      type="submit"
+      (click)="addmovieToCart(this.movie, quantityInput.value)"
+      style="margin: 5%; margin-left: auto"
+      class="btn btn-primary"
+    >
+      Submit
+    </button>
+  </form>-->
+</div>
+</div>
