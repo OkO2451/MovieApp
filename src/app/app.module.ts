@@ -10,6 +10,9 @@ import {FormsModule} from "@angular/forms";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app.routing.module";
+import { CommentComponent } from './comment/comment.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MovieSearchServiceComponent } from './movie-search-service/movie-search-service.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import {AppRoutingModule} from "./app.routing.module";
     AppComponent,
     ListMoviesComponent,
     MovieDetailsComponent,
-    MovieItemComponent
+    MovieItemComponent,
+    CommentComponent,
+    NavbarComponent,
+    MovieSearchServiceComponent
   ],
     imports: [
         BrowserModule, HttpClientModule, FormsModule, Ng2SearchPipeModule,AppRoutingModule

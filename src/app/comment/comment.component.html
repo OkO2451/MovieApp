@@ -1,0 +1,8 @@
+<form (submit)="addComment(comment.value); comment.value='';">
+    <input #comment type="text" placeholder="Add a comment">
+    <button type="submit">Add</button>
+  </form>
+  
+  <ul>
+    <li *ngFor="let comment of comments">{{comment}}</li>
+  </ul>

@@ -1,33 +1,23 @@
-import { Component } from '@angular/core';
-import {MoviesServiceService} from "../services/movies-service.service";
-import {HttpClient} from "@angular/common/http";
-import {Movie} from "../models/Movie";
+import { Component, OnInit } from '@angular/core';
+import { MovieSearchService } from '../movie-search.service';
 
 @Component({
   selector: 'app-list-movies',
   templateUrl: './list-movies.component.html',
   styleUrls: ['./list-movies.component.css']
 })
-export class ListMoviesComponent {
-allMovies:Movie[]=[];
-  searchText = '';
+export class ListMoviesComponent implements OnInit {
+  allMovies: any[] = [];
 
-  moviesJson = new MoviesServiceService(this.http);
-getAllMovies=()=>{
+  constructor(private movieSearchService: MovieSearchService) { }
 
-  this.moviesJson.getMovies().subscribe(data => {
-    this.allMovies=data.results;
-
-    console.log(this.allMovies);
-  });
-
-}
-
-constructor(private http: HttpClient) {
-}
   ngOnInit() {
     this.getAllMovies();
-
   }
 
+  getAllMovies() {
+    this.movieSearchService.getMovies('').subscribe(data => {
+      this.allMovies = data.results;
+    });
+  }
 }

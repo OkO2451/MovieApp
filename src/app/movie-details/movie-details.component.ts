@@ -10,6 +10,7 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./movie-details.component.css']
 })
 export class MovieDetailsComponent {
+  movie: any;
 
   idFilm:number = 1;
   detailService:MoviesServiceService=new MoviesServiceService(this.http);
