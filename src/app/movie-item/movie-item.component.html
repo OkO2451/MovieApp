@@ -6,18 +6,10 @@
     <!--<p class="card-text">{{movie.overview}}</p>-->
     <ul class="list-inline">
    
-      <li class="list-inline-item">Views: {{movie.popularity}}</li>
+      <li class="list-inline-item">score: {{movie.popularity}}</li>
     </ul>
   </div>
-  <!--
-  <div class="card-footer">
-    <ul class="list-inline">
-      <li class="list-inline-item">Original Language: {{movie.original_language}}</li>
-      <li class="list-inline-item">Vote Average: {{movie.vote_average}}</li>
-      <li class="list-inline-item">Vote Count: {{movie.vote_count}}</li>
-    </ul>
-  </div>
-  -->
+ 
   <div [routerLink]="['/movie-detail', movie.id]"
 
        style="cursor: hand; margin: 2%">

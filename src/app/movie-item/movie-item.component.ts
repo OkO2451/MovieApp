@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Movie} from "../models/Movie";
-import {MoviesServiceService} from "../services/movies-service.service";
+import {MovieSearchService} from "../services/movie-search.service";
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 
@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
 export class MovieItemComponent {
   @Input() movie!: Movie ;
   @Input() prodItem: any;
-  detailService:MoviesServiceService=new MoviesServiceService(this.http)
+  detailService:MovieSearchService=new MovieSearchService(this.http)
 
   handleDetailClick(id: number) {
     //this.detailService.setCurrentItemId(id);
