@@ -1,23 +1,19 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-import {ListMoviesComponent} from "./list-movies/list-movies.component";
-import {MovieDetailsComponent} from "./movie-details/movie-details.component";
-
-
-//import { DetailmovieComponent } from './detail-movie/detail-movie.component';
-//import { AuthComponent } from './auth/auth.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { LoginComponent } from "./login/login.component";
+import { ListMoviesComponent } from "./list-movies/list-movies.component";
+import { MovieDetailsComponent } from "./movie-details/movie-details.component";
+import { SignupComponent } from "./signup/signup.component";
 
 const routes: Routes = [
-  { path: '', component: ListMoviesComponent  },
+  { path: "", component: ListMoviesComponent },
 
   {
     path: "movie-detail/:id",
-    component: MovieDetailsComponent ,
-
+    component: MovieDetailsComponent,
   },
-
-
+  { path: "login", component: LoginComponent },
+  { path: "signup", component: SignupComponent },
 ];
 
 @NgModule({

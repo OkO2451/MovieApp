@@ -1,20 +1,19 @@
-
-<div class="card mb-3">
-  <img class="card-img-top" src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="backdrop">
+<div
+  class="card mb-3"
+  [routerLink]="['/movie-detail', movie.id]"
+  style="cursor: pointer;"
+  [title]="movie.title"
+>
+  <img
+    class="card-img-top"
+    src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}"
+    alt="backdrop"
+  />
   <div class="card-body">
     <h5 class="card-title">{{movie.title}}</h5>
     <!--<p class="card-text">{{movie.overview}}</p>-->
     <ul class="list-inline">
-   
-      <li class="list-inline-item">score: {{movie.popularity}}</li>
+      <li class="list-inline-item">Views: {{movie.popularity}}</li>
     </ul>
-  </div>
- 
-  <div [routerLink]="['/movie-detail', movie.id]"
-
-       style="cursor: hand; margin: 2%">
-    <button class="btn btn-outline-secondary btn-sm" onclick="showDetails()">Afficher les Details</button>
-
-
   </div>
 </div>

@@ -12,6 +12,8 @@ import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app.routing.module";
 import { CommentComponent } from "./comment/comment.component";
 import { NavbarComponent } from "./navbar/navbar.component";
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { NavbarComponent } from "./navbar/navbar.component";
     MovieItemComponent,
     CommentComponent,
     NavbarComponent,
+    LoginComponent,
+    SignupComponent,
   
   ],
   imports: [
