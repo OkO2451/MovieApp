@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6">
         <h2 class="text-center">Sign Up</h2>
-        <form (ngSubmit)="signup()" class="signup-form">
+        <form (ngSubmit)="signup(f)" #f="ngForm" class="signup-form">
           <div class="form-group mb-4">
             <label for="username">Username</label>
             <input type="text" class="form-control" id="username" [(ngModel)]="user.username" name="username" required>

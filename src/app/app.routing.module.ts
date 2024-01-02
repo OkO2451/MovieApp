@@ -4,6 +4,7 @@ import { LoginComponent } from "./login/login.component";
 import { ListMoviesComponent } from "./list-movies/list-movies.component";
 import { MovieDetailsComponent } from "./movie-details/movie-details.component";
 import { SignupComponent } from "./signup/signup.component";
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   { path: "", component: ListMoviesComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   },
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
+  { path: 'user', component: UserComponent },
 ];
 
 @NgModule({

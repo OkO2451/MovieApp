@@ -14,6 +14,7 @@ import { CommentComponent } from "./comment/comment.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SignupComponent } from './signup/signup.component';
     NavbarComponent,
     LoginComponent,
     SignupComponent,
+    UserComponent,
   
   ],
   imports: [
@@ -33,6 +35,7 @@ import { SignupComponent } from './signup/signup.component';
     FormsModule,
     Ng2SearchPipeModule,
     AppRoutingModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
