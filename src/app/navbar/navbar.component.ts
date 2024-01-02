@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { MovieSearchService } from '../services/movie-search.service';
 
 @Component({
@@ -7,17 +7,17 @@ import { MovieSearchService } from '../services/movie-search.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  @Output() search = new EventEmitter<string>();
+
   constructor(private movieSearchService: MovieSearchService) { }
 
   handleKeySearch(value: string) {
-    this.movieSearchService.getMoviesByKey(value).subscribe(data => {
-      console.log(data.results);
-    });
+    // make it route to /
+    
+    this.search.emit(value);
   }
 
   clearSearch() {
-    this.movieSearchService.getMovies().subscribe(data => {
-      console.log(data.results);
-    });
+    this.search.emit('');
   }
 }

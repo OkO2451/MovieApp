@@ -1,13 +1,6 @@
 <div class="">
-  <app-navbar></app-navbar>
-  <h5>Chercher un film par mot-clé</h5>
-  <form class="form-inline">
-    <div class="form-group mx-sm-3 mb-3">
-      <input type="text" class="form-control" placeholder="Mot cle" #val>
-    </div>
-    <button class="btn btn-primary mb-2" (click)="handleKeySearch(val.value)">Search</button>
-    <button class="btn btn-secondary mb-2" (click)="clearSearch()">reset</button>
-  </form>
+  <app-navbar (search)="handleKeySearch($event)"></app-navbar>
+ 
 </div>
 
 <div class="container bg-dark text-white">

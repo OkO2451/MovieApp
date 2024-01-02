@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="user-page">
-    <h1>Welcome, {{ user.username }}!</h1>
-    <p>Your email is: {{ user.email }}</p>
+    <h1>Welcome, {{ this.userService.getUser().username }}!</h1>
+    <p>Your email is: {{ this.userService.getUser().email }}</p>
     <p>Your role is: </p>
   </div>

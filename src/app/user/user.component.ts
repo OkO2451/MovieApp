@@ -11,7 +11,7 @@ import { User } from '../models/user';
 export class UserComponent implements OnInit {
   user: User = this.userService.getUser();
 
-  constructor(private userService: UserService, private loginService: LoginService) { // inject LoginService
+  constructor(public userService: UserService, private loginService: LoginService) { // inject LoginService
 
   }
 
